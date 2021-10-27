@@ -1,0 +1,39 @@
+.Modal{
+    width:  600px;
+    margin: 7rem auto;
+    background-color: rgb(6 6 6 / 86%);
+    border-radius: none;
+    border-radius: 0.5rem;
+    box-shadow: 4px 5px rgb(6 6 6 / 70%);
+}
+
+.editProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.editProfile h3{
+    color: white;
+}
+
+.edit__from{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit__from input{
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+.edit__from button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: lightskyblue;
+    cursor: pointer;
+}

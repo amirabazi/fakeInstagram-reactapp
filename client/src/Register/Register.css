@@ -1,0 +1,80 @@
+.register{
+    width: 350px;
+    border: 1px solid silver;
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding:1rem 0;
+    border-radius: 0.25rem;
+}
+
+.register_img{
+    object-fit: content;
+    width: 150px;   
+    height: auto;
+    margin: 0 auto;
+    margin-top:1rem;
+}
+
+.register__info{
+    text-align: center;    
+    color: lightslategrey
+}
+
+.register_form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.form__input{
+    padding:0.5rem;    
+    width: 80%;
+    margin:0 auto;
+    margin-top:0.5rem;
+    border: 1px solid silver;
+    border-radius: .25rem;
+}
+
+.form__btn{
+    padding:0.5rem;
+    margin:1rem auto;
+    width: 80%;
+    margin-top: 1rem;
+    background-color: lightskyblue;
+    border:none;
+    border-radius: .25rem;
+    font-weight: bold;
+}
+
+.login__span{
+    color: rgb(48, 162, 233);
+    cursor: pointer;
+}
+
+.error{
+    margin: 0;
+    color:red;
+    text-align: center;
+    font-size: 14px;
+}
+
+.imgAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 0.5rem;
+    padding: 1rem;
+}
+
+.imgAdd_input {
+    margin-top: 1rem;
+    border: 1px solid silver;
+    
+}

@@ -1,0 +1,43 @@
+.Modal{
+    width:  600px;
+    margin: 7rem auto;
+    background-color: rgb(6 6 6 / 86%);
+    border-radius: none;
+    border-radius: 0.5rem;
+    box-shadow: 4px 5px rgb(6 6 6 / 70%);
+}
+.newstory{    
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    padding: 2rem; 
+}
+
+.newstory h2{
+    color:white;
+}
+
+.newstory__form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form__input{
+    
+    border: 1px solid rgb(87, 87, 87);
+    box-shadow: 3px 3px rgb(124, 124, 124);
+}
+
+.newstory__form button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: lightskyblue;
+    cursor: pointer;
+}

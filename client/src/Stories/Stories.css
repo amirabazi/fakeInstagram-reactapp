@@ -1,0 +1,164 @@
+.home_left{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 800px;
+    margin: 0 auto;
+    flex-direction: column-reverse;    
+}
+
+.stories{
+    width: 800px;
+    margin: 0 auto;
+    margin-top:80px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    border: 1px solid rgb(206, 201, 201);        
+    overflow-x:scroll;   
+    overflow-y: hidden;
+    scroll-behavior: smooth;   
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:0.5rem;
+    cursor: pointer;
+}
+
+.pop:hover{
+    transform: scale(1.05);
+}
+
+.story__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border:1px solid silver;
+    padding: 0.2rem;
+    background-color: rgb(241, 231, 231);
+    object-fit: cover;
+}
+
+.story__user{
+    margin:0.1rem 0;    
+    color:rgb(128, 128, 128);
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.posts{
+    border: 1px solid rgb(206, 201, 201);    
+    margin: 1rem 0;
+}
+
+
+.post__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__top__left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.post__img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%;      
+}
+
+.post__user{
+    margin-left: 1rem;
+    font-weight: 600;
+    cursor: pointer;  
+}
+
+.post__top__right{
+    margin-right: 2rem;
+}
+
+.dots{
+    font-size: 1.5rem;
+}
+
+.content__img{
+    width: 100%;
+    min-height: 500px;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+.post__intertact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    font-size: 2rem;
+    padding:0 0.7rem;
+    cursor: pointer;
+}
+
+.post__addcomm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid silver;
+    padding:1rem;    
+}
+
+.post__input{
+    flex:1;  
+    border:none; 
+    padding: 0.5rem;
+}
+
+.post__addbtn{
+    border:none;
+    background-color: white;
+    color:rgb(110, 168, 187);
+    font-size: 15px;
+    cursor: pointer;    
+}
+
+.post__addbtn:hover{
+    color:rgb(41, 115, 139);
+}
+
+.emoji__icon{
+    font-size: 2rem;
+    cursor: pointer;       
+}
+
+.about__img{
+    margin:0;
+    padding:0 0.25rem;
+}
+
+.liked{
+    color:red;    
+}
+
+.sharedSpan{
+    color: red;
+    margin:0;
+}
+
+.interact__left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post__comments{
+    padding:0 1rem;
+}
