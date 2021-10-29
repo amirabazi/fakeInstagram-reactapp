@@ -5,7 +5,7 @@ import Editprofile from './Editprofile';
 import axios from 'axios';
 import { useRecoilState } from 'recoil'
 import {loggedState, sessData,userDataAll} from '../atoms'
-
+import Navbar from '../Navbar/Navbar';
 
 function Profile() {
 
@@ -18,7 +18,6 @@ function Profile() {
         setEditToggle((value)=>!value)
         console.log(editToggle)
     }
-
     
 
     useEffect(() => {
@@ -29,8 +28,7 @@ function Profile() {
             setProfileData(response.data[0]);
         }).catch((error)=>{
             console.log(error);
-        })
-       
+        })       
     }, [])    
 
     console.log('profdata',profileData)
@@ -44,21 +42,18 @@ function Profile() {
             
         }).catch((error)=>{
             console.log(error);
-        })
-       
-    }, [])
-    
-    console.log('postdata',userPosts.length)
-    
+        })       
+    }, [])  
 
     return (        
-
-        <div className='profile'>
+        <div>
+            <Navbar/>
+        <div className='profile'>            
             <div className="profile__about">
                 <img src={profileData.avatar} alt="" className="about__img" />
                 <div className="about__info">
                     <div className="profile__top">
-                        <p>{userData.username}</p>
+                        <p>{profileData.username}</p>
                         <button onClick={editProfileToggle}>Edit Profile</button>
                     </div>
                     <Editprofile editToggle={editToggle} setEditToggle = {setEditToggle} />
@@ -70,18 +65,18 @@ function Profile() {
                         <p>{profileData.placeFrom}</p>
                         <p>{profileData.about}</p>
                     </div>
-
                 </div>
             </div>
 
             <div className="profile__posts">
                 {userPosts.map((data)=>{
                     return <div key={data.idposts} className="img__wrapper">
-                    <img src={data.postimg} alt="" />
-                </div>
+                                <img src={data.postimg} alt="" />
+                           </div>
                 })}             
 
             </div>
+        </div>
         </div>
     )
 }

@@ -16,6 +16,7 @@ function Login() {
     const [isLogged, setIsLogged] = useRecoilState(loggedState);
     
 
+    console.log('LOGIN SATUTS', isLogged);
     const getLogin = async (e) => {
         e.preventDefault();
         axios.post("http://localhost:3005/login", {

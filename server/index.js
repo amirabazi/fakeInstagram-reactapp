@@ -108,7 +108,7 @@ app.post("/editprofile", (req,res)=>{
     avatar = req.body.avatar;
     userid = req.body.userid;
 
-    const editProfileQuery = "UPDATE users SET avatar = ?, name = ?, placeFrom = ?, about = ? WHERE (iduser = ?);";
+    const editProfileQuery = "UPDATE users SET avatar = ?, name = ?, placeFrom = ?, about = ? WHERE iduser = ?;";
     db.query(editProfileQuery,[avatar,userName,place,about,userid],(error, result)=>{
         console.log(result);
         console.log(error);

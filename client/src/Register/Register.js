@@ -54,9 +54,11 @@ function Register() {
                 <button type='submit' className='form__btn'>Register</button>
             </form>
             <p className='error'>{error}</p>
-           <Link to="/login"> <p className='register__info'>
-                You already have account? <span className='login__span'>Login</span>
-            </p>
+            <Link to="/login">
+                 <p className='register__info'>
+                    You already have account? 
+                    <span className='login__span'>Login</span>
+                 </p>
             </Link>
         </div>
     )

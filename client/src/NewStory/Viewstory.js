@@ -7,10 +7,7 @@ import {
 import axios from 'axios';
 
 function Viewstory({imgurl , id , storyOn, setStoryOn }) {   
-    return (
-        //axios get iz baze SELECT imgsotry FROM posts WHERE id = id ->>> i taj imgstory umjesto imgURL
-
-
+    return (     
         <Modal className='modal'
             isOpen={storyOn}
             onRequestClose={() => setStoryOn(false)}

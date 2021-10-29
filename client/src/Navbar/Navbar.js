@@ -18,13 +18,9 @@ function Navbar() {
     const changeAddPostState = () => {
         setAddPostOn((value) => !value);
     }
-
-
     const dropdownToggle = () => {
         setDropmenuToggle((value) => !value);
     }
-
-
 
     return (
         <div className='navbar'>
@@ -36,7 +32,7 @@ function Navbar() {
                 <a href="/#home"><AiFillHome className='options__btn' /></a>
                 <Link to="/addpost"><AiOutlineFolderAdd className='options__btn' onClick={changeAddPostState} /> </Link>
                 <Newpost addPostOn={addPostOn} setAddPostOn={setAddPostOn} />                
-                <img onClick={dropdownToggle} className='options__profile' src={userData.avatar} alt="profile" />
+                <img onClick={dropdownToggle} className='options__profile' src={userData.avatar} />
                 <Dropdown dropmenuToggle={dropmenuToggle} />
             </div>
 

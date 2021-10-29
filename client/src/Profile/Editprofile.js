@@ -26,7 +26,6 @@ function Editprofile({ editToggle, setEditToggle }) {
         }).then((response) => {
             setEditToggle(false);
             console.log(response);
-
         }).catch((error) => {
             console.log(error);
         })

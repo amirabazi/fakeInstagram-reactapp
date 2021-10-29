@@ -10,8 +10,7 @@ function Newstory({ modalOn, setModalOn }) {
     
     const history = useHistory();
     const [storyUrl, setStoryUrl] = useState(null);
-    let localUserId = localStorage.getItem("userid");  
-    
+    let localUserId = localStorage.getItem("userid");      
 
     const submitStory = async (e) =>{
         e.preventDefault();
@@ -24,9 +23,7 @@ function Newstory({ modalOn, setModalOn }) {
             }else{
                 console.log(response.data)
                 setModalOn(false);               
-            }
-            
-            
+            }           
         }).catch((error)=>{
             console.log(error);
         })

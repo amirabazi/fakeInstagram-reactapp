@@ -18,11 +18,11 @@ import {
   useRecoilValue,
 } from 'recoil';
 import {loggedState} from './atoms'
-
-
+import ProtectedRoutes from './ProtectedRoutes'
 
 function App() {
   const [isLogged, setIsLogged] = useRecoilState(loggedState);
+  console.log(isLogged)
   return (     
    <Router>
      <Switch>       
@@ -31,15 +31,9 @@ function App() {
       </Route>
       <Route path="/register">
         <Register/>
-      </Route>      
-      <Route path="/profile">
-        <Navbar/>
-        <Profile/>
-      </Route>
-      <Route path="/">
-        <Navbar/>
-        <Stories/>
-      </Route>
+      </Route>            
+      <ProtectedRoutes path="/profile" component={Profile} isAuth={isLogged} />      
+      <ProtectedRoutes path="/" exact component={Stories} isAuth={isLogged} />       
      </Switch>
    </Router>
    

@@ -13,8 +13,7 @@ import Viewstory from '../NewStory/Viewstory';
 import axios from 'axios';
 import { useRecoilState } from 'recoil'
 import {loggedState, sessData,userDataAll} from '../atoms'
-
-
+import Navbar from '../Navbar/Navbar';
 
 function Stories() {
 
@@ -26,8 +25,7 @@ function Stories() {
     const [userData, setUserData] = useRecoilState(userDataAll); 
     const [currentStory, setCurrentStory] = useState({});
     const [localData, setLocalData] = useState('');
-    let localUserId = localStorage.getItem("userid");  
-    
+    let localUserId = localStorage.getItem("userid");    
    
 
     const changeStoryOnState = (story) => {
@@ -76,41 +74,35 @@ function Stories() {
             })
     }, [])
 
-
-
     return (
-
+         <div>
+             <Navbar/>
+         
         <div id="home">
+               
             <div className='stories'>
                 <div className='story' onClick={changeModalState}>
                     <AiFillPlusCircle className='story__img pop' />
                     <p className='story__user'>Add Story</p>
-
                 </div>
 
                 {story.map((data) => {
                     return <div id={data.idstories} className='story'>
-                        <img onClick={()=>changeStoryOnState(data)}
-                            className='story__img pop'
-                            src={data.avatar}
-                            alt="" />
-                        <p className='story__user'>{data.username}</p>
-                        
-                    </div>
-
+                                <img onClick={()=>changeStoryOnState(data)}
+                                    className='story__img pop'
+                                    src={data.avatar}
+                                    alt="" />
+                                <p className='story__user'>{data.username}</p>                          
+                           </div>
                 })}
-            <Viewstory imgurl={currentStory.img} id={currentStory.id} storyOn={storyOn} setStoryOn={setStoryOn} />
+                 <Viewstory imgurl={currentStory.img} id={currentStory.id} storyOn={storyOn} setStoryOn={setStoryOn} />
             </div>
             <Newstory modalOn={modalOn} setModalOn={setModalOn} />
             <div id="stories" className="home_left">
-
-                    {/* INNER JOIN POSTS I USER DA UZMEM ODATLE AVATAR, USERNAME */}
+                    
                 {posts.map((post) => {
-
                     return <div className='posts' id={post.idposts}>
                         {/* {top-post} */}
-
-
                         <div className="post__top">
                             <div className="post__top__left">
                                 <img
@@ -122,15 +114,12 @@ function Stories() {
                                 </Link>
                             </div>
                         </div>
-
                         {/* {post img} */}
-
                         <div className="post__content">
                             <img className='content__img'
                                 src={post.postimg}
                                 alt="" />
                         </div>
-
                         {/* {interaction btn} */}
                         <div className="post__intertact">
                             <div className="interact__left">
@@ -144,11 +133,9 @@ function Stories() {
                             </div>
                         </div>
                         {/* {comment section} */}
-
                         <div className="post__comments">
                             <p className='caption'>{post.postcaption}</p>
                         </div>
-
                         {/* {input} */}
                         <form className="post__addcomm">
                             <AiOutlineSmile className='emoji__icon pop' />
@@ -160,6 +147,7 @@ function Stories() {
                     </div>
                 })}
             </div >
+        </div>
         </div>
     )
 }

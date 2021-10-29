@@ -10,7 +10,6 @@ function Newpost({ addPostOn, setAddPostOn }) {
     const [imgUrl, setImgUrl] = useState('')
     const [caption, setCaption] = useState('')
     let localUserId = localStorage.getItem("userid");  
-
     const submitPost = async (e) => {
         e.preventDefault();
         if (imgUrl === '') { }
